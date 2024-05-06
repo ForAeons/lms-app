@@ -1,0 +1,19 @@
+**/node_modules
+**/vendor
+**/tmp/**/*
+
+**/.env.development
+**/.env.production
+
+# Dev related files
+**/.github/
+**/.golangci.yml
+**/captaingithook.json
+
+# MacOS files
+**.DS_Store
+
+**/.vscode
+.editorconfig
+.idea
+coverage*

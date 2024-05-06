@@ -1,0 +1,33 @@
+services:
+  server:
+    depends_on:
+      - db
+      - cache
+    build: .
+    env_file:
+      - .env.development
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./lms-backend:/app
+      - lms-file-storage:/app/file_storage
+
+  db:
+    image: postgres:16.1-alpine
+    env_file: .env.development
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+    volumes:
+      - lms-db-storage:/var/lib/postgresql/data
+
+  cache:
+    image: redis:7.2.4-alpine
+    ports:
+      - "${REDIS_PORT}:${REDIS_PORT}"
+    volumes:
+      - lms-cache-storage:/data
+
+volumes:
+  lms-db-storage:
+  lms-cache-storage:
+  lms-file-storage:
