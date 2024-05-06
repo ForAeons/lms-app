@@ -2,8 +2,7 @@
 **/vendor
 **/tmp/**/*
 
-**/.env.development
-**/.env.production
+**/.env*.local
 
 # Dev related files
 **/.github/
