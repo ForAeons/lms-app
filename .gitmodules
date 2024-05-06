@@ -1,8 +1,8 @@
 [submodule "lms-frontend"]
 	path = lms-frontend
 	url = https://github.com/ForAeons/lms-frontend-v2
-  branch = master
+	branch = master
 [submodule "lms-backend"]
 	path = lms-backend
 	url = https://github.com/ForAeons/lms-backend
-  branch = master
+	branch = master
