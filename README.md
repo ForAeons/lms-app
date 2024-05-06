@@ -1,4 +1,4 @@
-# Library Management System Deployment
+# Library Management System
 
 This repository combines the frontand and the backend into a single repository for easy deployment.
 
