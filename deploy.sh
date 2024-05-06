@@ -1,15 +1,14 @@
 #!/bin/bash
 
 # Load environment variables
-export $(cat ./lms-backend/.env.development | xargs)
 export $(cat .env.local | xargs)
 
 echo "Building Docker image..."
-docker build .
+docker build . > /dev/null
 
 # Build and start Docker containers
 echo "Starting Docker containers..."
-docker compose up -d
+docker compose up -d > /dev/null
 
 # Wait for the server to start
 echo "Waiting for the server to become active..."

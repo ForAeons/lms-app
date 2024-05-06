@@ -32,6 +32,4 @@ COPY lms-backend/go.mod lms-backend/go.sum ./
 RUN go mod download
 
 COPY lms-backend .
-COPY . .
-RUN ls -la /app
 CMD ["go", "run", "main.go"]
